@@ -32,6 +32,7 @@ public class User {
     private int picture_id;
     private String avatar_url;
     private Object metaData;
+    @ElementCollection
     private List<String> tags;
     private String presence;
     private String created_at;
