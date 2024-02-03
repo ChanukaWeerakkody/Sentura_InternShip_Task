@@ -4,12 +4,15 @@ import com.ijse.internship.demo.dto.UserDTO;
 import com.ijse.internship.demo.entity.User;
 import com.ijse.internship.demo.repo.UserRepo;
 import com.ijse.internship.demo.service.UserService;
+import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
+@Transactional
 public class UserServiceImpl implements UserService {
     @Autowired
     UserRepo repo;
