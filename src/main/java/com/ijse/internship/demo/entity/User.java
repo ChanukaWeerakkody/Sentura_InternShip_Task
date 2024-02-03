@@ -17,7 +17,7 @@ import java.util.List;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long guideId;
+    private Long userId;
     private String id;
     private String display_name;
     private String email;
@@ -32,9 +32,7 @@ public class User {
     private int picture_id;
     private String avatar_url;
     private Object metaData;
-    @ElementCollection
     private List<String> tags;
-
     private String presence;
     private String created_at;
     private String modified_at;
