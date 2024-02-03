@@ -15,8 +15,8 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @PostMapping(consumes = {MediaType.MULTIPART_FORM_DATA_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
-    public ResponseUtil addGuide(@RequestPart("guide") UserDTO userDTO) {
+    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseUtil addUser(@RequestBody UserDTO userDTO) {
         userService.saveUser(userDTO);
         return new ResponseUtil(200, "Registration Successfully....", userDTO);
     }

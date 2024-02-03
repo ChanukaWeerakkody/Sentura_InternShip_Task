@@ -27,7 +27,7 @@ public class UserDTO {
     private int directory_id;
     private int picture_id;
     private String avatar_url;
-    private Object metaData;
+    private byte[] metaData;
     private List<String> tags;
     private String presence;
     private String created_at;

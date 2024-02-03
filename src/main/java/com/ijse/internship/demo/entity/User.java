@@ -1,7 +1,6 @@
 package com.ijse.internship.demo.entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -31,7 +30,10 @@ public class User {
     private int directory_id;
     private int picture_id;
     private String avatar_url;
-    private Object metaData;
+
+    @Column(name = "metaData", columnDefinition = "BLOB")
+    private byte[] metaData;
+
     @ElementCollection
     private List<String> tags;
     private String presence;
